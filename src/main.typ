@@ -91,13 +91,13 @@
 #outline()
 
 // --- Содержание ---
-#include "chapters/01-introduction.typ"
-#include "chapters/02-main-content.typ"
-#include "chapters/03-conclusion.typ"
+#include "chapters/010-introduction.typ"
+#include "chapters/020-main-content.typ"
+#include "chapters/030-conclusion.typ"
 
 // --- Библиография ---
 #bibliography("refs/references.bib")
 
 // --- Приложения ---
 #show: appendixes
-#include "chapters/04-appendices.typ"
+#include "chapters/040-appendices.typ"

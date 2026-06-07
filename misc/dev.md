@@ -18,10 +18,10 @@ ninja dev       # start watching (auto-rebuild on save)
 ├── src/
 │   ├── main.typ                 # Entry point — document setup + chapter includes
 │   ├── chapters/
-│   │   ├── 01-introduction.typ  # Введение
-│   │   ├── 02-main-content.typ  # Основное содержание, элементы, аргументы
-│   │   ├── 03-conclusion.typ    # Заключение
-│   │   └── 04-appendices.typ    # Приложения
+│   │   ├── 010-introduction.typ  # Введение
+│   │   ├── 020-main-content.typ  # Основное содержание, элементы, аргументы
+│   │   ├── 030-conclusion.typ    # Заключение
+│   │   └── 040-appendices.typ    # Приложения
 │   ├── figures/                 # Изображения и иллюстрации
 │   └── refs/
 │       └── references.bib       # Библиографические ссылки
