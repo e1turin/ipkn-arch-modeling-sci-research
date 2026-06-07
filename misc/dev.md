@@ -1,25 +1,42 @@
 # Development workflow
 
-Typst: https://github.com/typst/typst#installation
+Typst: https://typst.app
+Ninja: https://ninja-build.org/
 
-To compile sources to pdf use:
+## Commands
 
 ```sh
-typst compile src/main.typ article.pdf
+ninja           # compile article.pdf (default)
+ninja article   # compile article.pdf
+ninja dev       # start watching (auto-rebuild on save)
 ```
 
-To edit article in interactive way (typst updates `article.pdf` on any change):
+## Project structure
 
-```sh
-typst watch src/main.typ article.pdf
+```
+├── build.ninja                  # Ninja build file
+├── src/
+│   ├── main.typ                 # Entry point — document setup + chapter includes
+│   ├── chapters/
+│   │   ├── 01-introduction.typ  # Введение
+│   │   ├── 02-main-content.typ  # Основное содержание, элементы, аргументы
+│   │   ├── 03-conclusion.typ    # Заключение
+│   │   └── 04-appendices.typ    # Приложения
+│   ├── figures/                 # Изображения и иллюстрации
+│   └── refs/
+│       └── references.bib       # Библиографические ссылки
+├── article.pdf                  # Скомпилированный отчёт
+├── misc/
+│   └── dev.md                   # Этот файл
+└── README.md
 ```
 
 ## VS Code Setup
 
-In VS Code plugin Tynimist can be used for integrated PDF preview and
+In VS Code plugin Tinymist can be used for integrated PDF preview and
 PDF-to-sources navigation.
 
 ## Agentic development
 
-The project contains `.agent` directory with Typst skill and GOST-specific
+The project contains `.agents` directory with Typst skill and GOST-specific
 knowledge which can be used while markup creation.
