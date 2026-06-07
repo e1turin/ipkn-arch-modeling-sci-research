@@ -1,3 +1,5 @@
 .DS_Store
 *.pdf
 !article.pdf
+src/images/
+.ninja_log
