@@ -1,0 +1,23 @@
+# Build automation for the Typst scientific report
+# Requires: typst, ninja
+# https://typst.app  |  https://ninja-build.org/
+
+rule compile
+  command = typst compile $src $dest
+  description = COMPILE $src -> $dest
+  pool = console
+
+rule watch
+  command = typst watch $src $dest
+  description = WATCH $src -> $dest
+  pool = console
+
+build article: compile
+  src = src/main.typ
+  dest = article.pdf
+
+build dev: watch
+  src = src/main.typ
+  dest = article-dev.pdf
+
+default article
